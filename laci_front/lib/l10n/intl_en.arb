@@ -1,0 +1,12 @@
+{
+    "@@locale": "en",
+    "title": "Korean Tourist App",
+    "@title": {
+      "description": "Title of the app"
+    },
+    "choose_language": "Choose your language",
+    "@choose_language": {
+      "description": "Prompt for language selection"
+    }
+  }
+  

@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'main_theme_screen.dart';
 
 class LanguageSelectionScreen extends StatelessWidget {
+  final Function(Locale) onLocaleChange;
+
+  LanguageSelectionScreen({required this.onLocaleChange});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +16,7 @@ class LanguageSelectionScreen extends StatelessWidget {
           ListTile(
             title: Text('한국어'),
             onTap: () {
-              // 언어 설정 후 다음 화면으로 이동
+              onLocaleChange(Locale('ko')); // 한국어로 변경
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => MainThemeScreen()),
@@ -22,6 +26,7 @@ class LanguageSelectionScreen extends StatelessWidget {
           ListTile(
             title: Text('English'),
             onTap: () {
+              onLocaleChange(Locale('en')); // 영어로 변경
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => MainThemeScreen()),
@@ -31,6 +36,7 @@ class LanguageSelectionScreen extends StatelessWidget {
           ListTile(
             title: Text('中文'),
             onTap: () {
+              onLocaleChange(Locale('zh')); // 중국어로 변경
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => MainThemeScreen()),
@@ -40,6 +46,7 @@ class LanguageSelectionScreen extends StatelessWidget {
           ListTile(
             title: Text('日本語'),
             onTap: () {
+              onLocaleChange(Locale('ja')); // 일본어로 변경
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => MainThemeScreen()),
